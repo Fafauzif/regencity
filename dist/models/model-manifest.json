@@ -1,0 +1,540 @@
+{
+  "version": 4,
+  "models": {
+    "regenport": {
+      "paths": {
+        "default": "/models/regenport.glb",
+        "service": "/models/regenport-service.glb",
+        "exploded": "/models/regenport-exploded.glb"
+      },
+      "bounds": {
+        "max": [
+          3600.0,
+          1810.0,
+          1940.0
+        ],
+        "min": [
+          0.0,
+          -92.0,
+          0.0
+        ]
+      },
+      "cameras": [
+        {
+          "fov": 35,
+          "id": "hero",
+          "label": "Hero",
+          "position": [
+            5600,
+            -6100,
+            4700
+          ],
+          "purpose": "default product view",
+          "target": [
+            1800,
+            900,
+            800
+          ]
+        },
+        {
+          "fov": 42,
+          "id": "process",
+          "label": "Process",
+          "position": [
+            5200,
+            -4100,
+            2200
+          ],
+          "purpose": "show energy path and interfaces",
+          "target": [
+            1900,
+            900,
+            900
+          ]
+        },
+        {
+          "fov": 38,
+          "id": "service",
+          "label": "Service",
+          "position": [
+            4100,
+            -5200,
+            1900
+          ],
+          "purpose": "show access panel and maintainable parts",
+          "target": [
+            1800,
+            250,
+            720
+          ]
+        },
+        {
+          "fov": 40,
+          "id": "exploded",
+          "label": "Exploded",
+          "position": [
+            6500,
+            -7000,
+            5200
+          ],
+          "purpose": "show assembly relationships",
+          "target": [
+            1800,
+            900,
+            900
+          ]
+        }
+      ],
+      "hotspots": [
+        {
+          "number": 1,
+          "sourceNumber": 1,
+          "id": "regenport.load_crane_interface",
+          "label": "Load / crane interface",
+          "description": "Load interface frame transfers hoist and payload loads into the skid.",
+          "anchor": [
+            250,
+            900,
+            850
+          ],
+          "components": [
+            "regenport.load_crane_interface"
+          ]
+        },
+        {
+          "number": 2,
+          "sourceNumber": 2,
+          "id": "regenport.motor_generator",
+          "label": "Motor-generator",
+          "description": "Motor-generator converts recovered shaft energy to electrical output.",
+          "anchor": [
+            1450,
+            900,
+            980
+          ],
+          "components": [
+            "regenport.motor_generator"
+          ]
+        },
+        {
+          "number": 3,
+          "sourceNumber": 3,
+          "id": "regenport.converter_inverter",
+          "label": "Converter / inverter",
+          "description": "Bidirectional converter conditions machine output for the DC link.",
+          "anchor": [
+            2775,
+            180,
+            720
+          ],
+          "components": [
+            "regenport.converter_inverter"
+          ]
+        },
+        {
+          "number": 4,
+          "sourceNumber": 4,
+          "id": "regenport.storage_buffer",
+          "label": "Storage buffer",
+          "description": "Modular storage cabinet buffers recovered energy before dispatch.",
+          "anchor": [
+            2960,
+            300,
+            860
+          ],
+          "components": [
+            "regenport.storage_buffer"
+          ]
+        },
+        {
+          "number": 5,
+          "sourceNumber": 5,
+          "id": "regenport.controller_sensors",
+          "label": "Controller / sensors",
+          "description": "Controller and instrumentation provide state, protection and telemetry.",
+          "anchor": [
+            1720,
+            120,
+            550
+          ],
+          "components": [
+            "regenport.controller_sensors"
+          ]
+        },
+        {
+          "number": 6,
+          "sourceNumber": 6,
+          "id": "regenport.service_emergency_access",
+          "label": "Service / emergency access",
+          "description": "Lockable access panel and emergency stop provide service-first intervention.",
+          "anchor": [
+            2250,
+            -40,
+            800
+          ],
+          "components": [
+            "regenport.service_emergency_access"
+          ]
+        }
+      ],
+      "units": "mm"
+    },
+    "regentransit": {
+      "paths": {
+        "default": "/models/regentransit.glb",
+        "service": "/models/regentransit-service.glb",
+        "exploded": "/models/regentransit-exploded.glb"
+      },
+      "bounds": {
+        "min": [
+          -928.6638729406516,
+          -1250.0,
+          0.0
+        ],
+        "max": [
+          1760.0,
+          1504.3864397574498,
+          1110.0
+        ]
+      },
+      "cameras": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "purpose": "default product view",
+          "position": [
+            2350,
+            -2550,
+            1800
+          ],
+          "target": [
+            415.6680635296742,
+            127.1932198787249,
+            555.0
+          ],
+          "fov": 35
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "purpose": "show rail-to-grid energy path",
+          "position": [
+            2600,
+            1900,
+            1250
+          ],
+          "target": [
+            415.6680635296742,
+            127.1932198787249,
+            555.0
+          ],
+          "fov": 42
+        },
+        {
+          "id": "service",
+          "label": "Service",
+          "purpose": "show access doors and cooling",
+          "position": [
+            -1400,
+            -2400,
+            1150
+          ],
+          "target": [
+            415.6680635296742,
+            127.1932198787249,
+            555.0
+          ],
+          "fov": 38
+        },
+        {
+          "id": "exploded",
+          "label": "Exploded",
+          "purpose": "show assembly relationships",
+          "position": [
+            2800,
+            -2800,
+            2200
+          ],
+          "target": [
+            415.6680635296742,
+            127.1932198787249,
+            555.0
+          ],
+          "fov": 40
+        }
+      ],
+      "hotspots": [
+        {
+          "number": 1,
+          "sourceNumber": 1,
+          "id": "regentransit.rail_interface",
+          "label": "Rail / traction interface",
+          "description": "Two running rails, sleepers, and traction pickup geometry where braking energy enters the wayside recovery path.",
+          "anchor": [
+            0.0,
+            -21.5,
+            81.0
+          ],
+          "components": [
+            "regentransit.rail_interface"
+          ]
+        },
+        {
+          "number": 2,
+          "sourceNumber": 2,
+          "id": "regentransit.traction_inverter",
+          "label": "Traction inverter",
+          "description": "Bidirectional traction inverter cabinet with DC bus, switching modules, and service panel.",
+          "anchor": [
+            -594.33,
+            806.64,
+            511.01
+          ],
+          "components": [
+            "regentransit.traction_inverter"
+          ]
+        },
+        {
+          "number": 3,
+          "sourceNumber": 4,
+          "id": "regentransit.wayside_converter",
+          "label": "Wayside converter",
+          "description": "AC/DC recovery converter that conditions regenerated traction power for storage and grid dispatch.",
+          "anchor": [
+            622.0,
+            863.75,
+            531.01
+          ],
+          "components": [
+            "regentransit.wayside_converter"
+          ]
+        },
+        {
+          "number": 4,
+          "sourceNumber": 5,
+          "id": "regentransit.storage_rack",
+          "label": "Storage rack",
+          "description": "Modular lithium-ion buffer rack sized as a screening concept for peak braking events.",
+          "anchor": [
+            1120.0,
+            860.0,
+            595.0
+          ],
+          "components": [
+            "regentransit.storage_rack"
+          ]
+        },
+        {
+          "number": 5,
+          "sourceNumber": 6,
+          "id": "regentransit.thermal_management",
+          "label": "Thermal management",
+          "description": "Air-cooled radiator and fan bank serving converter and battery coolant loops.",
+          "anchor": [
+            1523.45,
+            1052.2,
+            460.44
+          ],
+          "components": [
+            "regentransit.thermal_management"
+          ]
+        },
+        {
+          "number": 6,
+          "sourceNumber": 8,
+          "id": "regentransit.grid_wayside_interface",
+          "label": "Grid / wayside interface",
+          "description": "Concept transformer, feeder conduit, and termination point for the local distribution circuit.",
+          "anchor": [
+            553.1,
+            -750.0,
+            567.51
+          ],
+          "components": [
+            "regentransit.grid_wayside_interface"
+          ]
+        }
+      ],
+      "units": "mm"
+    },
+    "regenflow": {
+      "paths": {
+        "default": "/models/regenflow.glb",
+        "service": "/models/regenflow-service.glb",
+        "exploded": "/models/regenflow-exploded.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.0000002842170943e-07,
+          -520.0000001,
+          -24.0000001
+        ],
+        "max": [
+          2200.0000001,
+          520.0000001,
+          1290.0000001
+        ],
+        "size": [
+          2200.0000001999997,
+          1040.0000002,
+          1314.0000002000002
+        ]
+      },
+      "cameras": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "position": [
+            2800,
+            -2700,
+            2100
+          ],
+          "target": [
+            1080,
+            0,
+            620
+          ],
+          "fov": 36
+        },
+        {
+          "id": "process",
+          "label": "Process",
+          "position": [
+            2500,
+            2100,
+            1350
+          ],
+          "target": [
+            1080,
+            0,
+            620
+          ],
+          "fov": 40
+        },
+        {
+          "id": "service",
+          "label": "Service aisle",
+          "position": [
+            1200,
+            -3000,
+            1250
+          ],
+          "target": [
+            1000,
+            0,
+            620
+          ],
+          "fov": 42
+        },
+        {
+          "id": "exploded",
+          "label": "Exploded",
+          "position": [
+            3300,
+            -3400,
+            2400
+          ],
+          "target": [
+            1080,
+            0,
+            620
+          ],
+          "fov": 42
+        }
+      ],
+      "hotspots": [
+        {
+          "number": 1,
+          "sourceNumber": 1,
+          "id": "regenflow.inlet_pressure_pipe",
+          "label": "Inlet pressure pipe",
+          "description": "DN250 PN16 pressure inlet with flanged spool",
+          "anchor": [
+            270,
+            0,
+            620
+          ],
+          "components": [
+            "regenflow.inlet_pressure_pipe"
+          ]
+        },
+        {
+          "number": 2,
+          "sourceNumber": 2,
+          "id": "regenflow.isolation_valve",
+          "label": "Isolation valve",
+          "description": "Full-port butterfly isolation valve upstream of runner",
+          "anchor": [
+            584,
+            0,
+            770
+          ],
+          "components": [
+            "regenflow.isolation_valve"
+          ]
+        },
+        {
+          "number": 3,
+          "sourceNumber": 3,
+          "id": "regenflow.pat_runner",
+          "label": "PAT/turbine runner",
+          "description": "Axial pressure-recovery runner in serviceable casing",
+          "anchor": [
+            904.0,
+            0,
+            620
+          ],
+          "components": [
+            "regenflow.pat_runner"
+          ]
+        },
+        {
+          "number": 4,
+          "sourceNumber": 4,
+          "id": "regenflow.generator",
+          "label": "Generator",
+          "description": "Permanent-magnet generator coupled to runner shaft",
+          "anchor": [
+            940,
+            -5.0,
+            1040
+          ],
+          "components": [
+            "regenflow.generator"
+          ]
+        },
+        {
+          "number": 5,
+          "sourceNumber": 5,
+          "id": "regenflow.service_bypass",
+          "label": "Service-first bypass",
+          "description": "Parallel bypass line keeps downstream service live",
+          "anchor": [
+            1000,
+            350,
+            620
+          ],
+          "components": [
+            "regenflow.service_bypass"
+          ]
+        },
+        {
+          "number": 6,
+          "sourceNumber": 7,
+          "id": "regenflow.control_cabinet",
+          "label": "Control/protection cabinet",
+          "description": "IP65 cabinet with PLC, breaker and E-stop",
+          "anchor": [
+            1740.0,
+            -410,
+            470
+          ],
+          "components": [
+            "regenflow.control_cabinet"
+          ]
+        }
+      ],
+      "units": "mm"
+    }
+  }
+}
