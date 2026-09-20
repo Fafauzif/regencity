@@ -1,0 +1,1024 @@
+{
+  "contentVersion": "screening-0.1",
+  "status": "provisional",
+  "project": {
+    "id": "regencity-indonesia",
+    "name": "ReGenCity Indonesia",
+    "descriptor": "Urban energy recovery and flexibility platform",
+    "language": "en",
+    "pilotGeography": {
+      "name": "North Jakarta",
+      "label": "provisional pilot geography",
+      "status": "provisional",
+      "basis": "context recommendation; site selection is not complete"
+    },
+    "showcaseGeography": {
+      "name": "IKN Nusantara",
+      "label": "provisional long-term showcase",
+      "status": "provisional",
+      "basis": "context recommendation; program scope is not confirmed"
+    }
+  },
+  "navigation": {
+    "primaryPaths": [
+      {
+        "id": "platform",
+        "route": "/platform",
+        "label": "Explore the ReGenCity Platform",
+        "status": "provisional"
+      },
+      {
+        "id": "equipment",
+        "route": "/equipment",
+        "label": "Explore the Equipment",
+        "status": "provisional"
+      }
+    ],
+    "supportingRoutes": [
+      {
+        "id": "home",
+        "route": "/",
+        "purpose": "Two-choice landing",
+        "status": "provisional"
+      },
+      {
+        "id": "platform-methodology",
+        "route": "/platform/methodology",
+        "purpose": "Assumptions, limits, and provenance",
+        "status": "provisional"
+      },
+      {
+        "id": "platform-simulation",
+        "route": "/platform/simulation",
+        "purpose": "Bounded coordination story",
+        "status": "provisional"
+      },
+      {
+        "id": "platform-nodes",
+        "route": "/platform/nodes",
+        "purpose": "Three-node summary",
+        "status": "provisional"
+      },
+      {
+        "id": "platform-node-detail",
+        "route": "/platform/nodes/:nodeId",
+        "purpose": "Node detail from platform path",
+        "status": "provisional"
+      },
+      {
+        "id": "equipment-node-detail",
+        "route": "/equipment/:nodeId",
+        "purpose": "Interactive model detail",
+        "status": "provisional"
+      }
+    ]
+  },
+  "platform": {
+    "status": "provisional",
+    "hero": {
+      "eyebrow": "ReGenCity Indonesia",
+      "title": "Recover what the city already moves.",
+      "body": "ReGenCity connects port, transit, and water systems that already move mass, vehicles, or pressure. It captures energy that would otherwise be dissipated, uses it locally first, stores the surplus, and coordinates a bounded response when the grid needs flexibility.",
+      "status": "provisional",
+      "primaryAction": "Explore the Equipment",
+      "secondaryAction": "See how the platform works"
+    },
+    "problem": {
+      "title": "Urban systems lose useful energy during normal work.",
+      "body": "Trains brake, cranes lower loads, and water networks reduce pressure as part of their required service. Those events are often treated as losses. ReGenCity treats them as recovery opportunities while keeping transport, cargo, and water service as hard constraints.",
+      "status": "provisional",
+      "cards": [
+        {
+          "id": "braking",
+          "title": "Braking",
+          "body": "Electric rail can route regenerative braking energy to another load or a nearby storage node.",
+          "status": "provisional"
+        },
+        {
+          "id": "lowering",
+          "title": "Lowering",
+          "body": "Crane lowering cycles can operate the motor-generator in regeneration and share power within the facility.",
+          "status": "provisional"
+        },
+        {
+          "id": "pressure-reduction",
+          "title": "Pressure reduction",
+          "body": "A suitable pressure-reduction point can use a pump-as-turbine or microturbine while maintaining the required service pressure.",
+          "status": "provisional"
+        }
+      ]
+    },
+    "operatingPrinciple": {
+      "title": "Recovery first. Coordination second.",
+      "body": "The digital layer does not command infrastructure to move wastefully. It forecasts normal operations, routes recovered energy to the nearest useful load, stores the surplus, and dispatches only the flexibility that remains available after safety and service reserves are protected.",
+      "status": "provisional",
+      "steps": [
+        {
+          "id": "normal-operation",
+          "order": 1,
+          "title": "Normal operations create recovery events",
+          "body": "A train brakes, a crane lowers a load, or water passes through a suitable pressure-reduction point.",
+          "status": "provisional"
+        },
+        {
+          "id": "direct-use",
+          "order": 2,
+          "title": "Use recovered energy locally",
+          "body": "The first destination is a nearby accelerating train, lifting crane, station load, or facility load.",
+          "status": "provisional"
+        },
+        {
+          "id": "store-surplus",
+          "order": 3,
+          "title": "Store the surplus",
+          "body": "Supercapacitors, batteries, flywheels, or water and ballast systems absorb energy that cannot be used immediately.",
+          "status": "provisional"
+        },
+        {
+          "id": "bounded-dispatch",
+          "order": 4,
+          "title": "Dispatch within operational bounds",
+          "body": "The coordinator offers stored energy or flexible demand only after local operating limits and reserve requirements are checked.",
+          "status": "provisional"
+        }
+      ]
+    },
+    "architecture": {
+      "title": "One platform, three anchor sectors, one bounded control loop.",
+      "status": "provisional",
+      "layers": [
+        {
+          "id": "recovery-node",
+          "title": "Recovery Node",
+          "body": "A sector-specific interface combines power conversion, measurement, sensors, isolation, and a local controller.",
+          "status": "provisional"
+        },
+        {
+          "id": "facility-microgrid",
+          "title": "Facility Microgrid",
+          "body": "The port, station, depot, or water facility decides whether energy is used locally, stored, or held in reserve.",
+          "status": "provisional"
+        },
+        {
+          "id": "district-coordination",
+          "title": "District Coordination",
+          "body": "A bounded cluster shares forecasts and availability across facilities without implying a new shared physical cable.",
+          "status": "provisional"
+        },
+        {
+          "id": "city-vpp",
+          "title": "ReGenCity OS",
+          "body": "A recovery-aware digital twin aggregates available flexibility for planning and a future utility interface.",
+          "status": "provisional"
+        }
+      ]
+    },
+    "screeningSummary": {
+      "title": "Screening view for the demonstration",
+      "status": "screening",
+      "note": "These are demo values for interaction and comparison, not measured site performance.",
+      "annualRecoveredEnergy": {
+        "value": 1.153,
+        "unit": "GWh/year",
+        "label": "combined screening estimate",
+        "basis": "rounded node demo aggregate",
+        "status": "screening"
+      },
+      "flexibilityTarget": {
+        "value": 1.3,
+        "unit": "MW for 15 minutes",
+        "label": "screening concept target",
+        "basis": "bounded dispatch demonstration",
+        "status": "screening"
+      },
+      "nodeBreakdown": [
+        {
+          "nodeId": "regen-port",
+          "value": 0.69,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "demo assumption",
+          "status": "screening"
+        },
+        {
+          "nodeId": "regen-transit",
+          "value": 0.142,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "demo assumption",
+          "status": "screening"
+        },
+        {
+          "nodeId": "regen-flow",
+          "value": 0.32,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "demo assumption",
+          "status": "screening"
+        }
+      ],
+      "optionalPilotRange": {
+        "annualRecoveredEnergy": {
+          "min": 3.5,
+          "max": 11.3,
+          "unit": "GWh/year",
+          "label": "screening opportunity range",
+          "basis": "essay-level Jakarta pilot projection; site study required",
+          "status": "screening"
+        },
+        "flexiblePower": {
+          "min": 4.3,
+          "max": 11.5,
+          "unit": "MW",
+          "label": "screening opportunity range",
+          "basis": "essay-level Jakarta pilot projection; site study required",
+          "status": "screening"
+        }
+      }
+    },
+    "coordinationStory": {
+      "title": "A bounded response, shown as a sequence",
+      "status": "provisional",
+      "disclaimer": "The simulation is illustrative and does not use live telemetry or utility dispatch.",
+      "events": [
+        {
+          "id": "event-detected",
+          "timeWindow": "near-term",
+          "title": "A grid need is detected",
+          "body": "The coordinator sees a local demand, voltage, price, or congestion signal in the demonstration model.",
+          "status": "provisional"
+        },
+        {
+          "id": "event-fast-response",
+          "timeWindow": "seconds",
+          "title": "Fast storage responds",
+          "body": "Supercapacitors or batteries provide the first bounded response while service reserves remain protected.",
+          "status": "provisional"
+        },
+        {
+          "id": "event-local-reuse",
+          "timeWindow": "minutes",
+          "title": "Recovery refills the local system",
+          "body": "Normal rail, port, or water operations refill storage when recoverable energy is available.",
+          "status": "provisional"
+        },
+        {
+          "id": "event-recovery",
+          "timeWindow": "later",
+          "title": "Deferred loads are restored",
+          "body": "The model releases flexible demand gradually after the response window, subject to local limits.",
+          "status": "provisional"
+        }
+      ]
+    },
+    "recoverabilityIndex": {
+      "title": "A screening index for where to start",
+      "body": "The Urban Recoverability Index ranks candidate assets before detailed engineering. It combines recoverable energy, cycle frequency, power value, retrofit effort, service criticality, ownership, location, and safety review.",
+      "status": "provisional",
+      "criteria": [
+        "recoverable energy per cycle",
+        "normal operating cycles",
+        "available power and local demand",
+        "retrofit effort and remaining equipment life",
+        "grid constraint or peak value",
+        "service criticality and operational disruption",
+        "ownership, data access, and safety requirements"
+      ]
+    },
+    "methodologyTeaser": {
+      "title": "What this demonstration does and does not claim",
+      "body": "The interface explains a system pattern and exposes screening assumptions. It is not a live control room, a fabrication drawing, a financial offer, or a guarantee of site output.",
+      "status": "provisional",
+      "action": "Read methodology and assumptions"
+    }
+  },
+  "equipment": {
+    "status": "provisional",
+    "index": {
+      "title": "Explore the recovery nodes",
+      "body": "Each concept uses the same interaction pattern: inspect the model, select a numbered hotspot, change camera or service state, and review the screening assumption.",
+      "status": "provisional"
+    },
+    "viewerLabels": {
+      "reset": "Reset view",
+      "default": "Default",
+      "exploded": "Exploded",
+      "service": "Service",
+      "previous": "Previous equipment",
+      "next": "Next equipment",
+      "selectHotspot": "Select component",
+      "camera": "Camera",
+      "threeDUnavailable": "3D preview unavailable",
+      "fallbackHint": "Showing the generated render instead.",
+      "status": "provisional"
+    },
+    "nodes": [
+      {
+        "id": "regen-port",
+        "name": "ReGenPort",
+        "shortName": "Port crane recovery",
+        "category": "lifting infrastructure",
+        "summary": "Recover electrical energy during controlled crane lowering cycles while cargo handling remains the primary service.",
+        "status": "screening",
+        "screeningEstimate": {
+          "value": 0.69,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "illustrative crane cycle and capture assumption",
+          "status": "screening"
+        },
+        "heroRender": "models/regen-port/renders/hero.png",
+        "fallbackRender": "models/regen-port/renders/fallback.png",
+        "modelManifest": "models/regen-port/manifest.json",
+        "operatingSequence": [
+          "lowering event drives the motor-generator",
+          "nearby lifting or facility loads receive direct energy first",
+          "surplus is routed to short-duration storage",
+          "stored energy can support a bounded peak response"
+        ],
+        "hotspots": [
+          {
+            "id": "suspended-load",
+            "number": 1,
+            "title": "Suspended load",
+            "category": "mechanical interface",
+            "description": "The lowering event is the source of recoverable potential energy; cargo duty remains the hard operational constraint.",
+            "sceneTargets": [
+              "load",
+              "hook",
+              "spreader"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "motor-generator",
+            "number": 2,
+            "title": "Motor-generator",
+            "category": "conversion",
+            "description": "The hoist drive operates regeneratively during a controlled lowering cycle.",
+            "sceneTargets": [
+              "hoist-motor",
+              "drive"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "controlled-transmission",
+            "number": 3,
+            "title": "Controlled transmission",
+            "category": "mechanical interface",
+            "description": "A conceptual transmission and brake path keeps the lowering motion controllable and serviceable.",
+            "sceneTargets": [
+              "gearbox",
+              "brake"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "dc-link",
+            "number": 4,
+            "title": "DC link and converter",
+            "category": "power electronics",
+            "description": "Bidirectional power electronics condition recovered energy for local loads or storage.",
+            "sceneTargets": [
+              "converter",
+              "dc-link"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "supercapacitor-rack",
+            "number": 5,
+            "title": "Supercapacitor rack",
+            "category": "storage",
+            "description": "Short-duration storage can absorb repeated high-power pulses before energy is routed onward.",
+            "sceneTargets": [
+              "supercapacitor",
+              "rack"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "battery-rack",
+            "number": 6,
+            "title": "Battery rack",
+            "category": "storage",
+            "description": "A battery path can hold surplus energy for a later local response; chemistry and rating require site study.",
+            "sceneTargets": [
+              "battery",
+              "battery-rack"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "edge-controller",
+            "number": 7,
+            "title": "Local edge controller",
+            "category": "controls",
+            "description": "Local logic protects voltage, storage limits, isolation, and emergency shutdown without relying on a cloud connection.",
+            "sceneTargets": [
+              "controller",
+              "io"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "service-isolation",
+            "number": 8,
+            "title": "Service isolation",
+            "category": "safety",
+            "description": "Isolation and access points keep maintenance separate from the cargo path.",
+            "sceneTargets": [
+              "service-deck",
+              "disconnect"
+            ],
+            "status": "provisional"
+          }
+        ],
+        "cameras": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "status": "provisional"
+          },
+          {
+            "id": "hoist",
+            "label": "Hoist path",
+            "status": "provisional"
+          },
+          {
+            "id": "power",
+            "label": "Power cabinet",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service access",
+            "status": "provisional"
+          }
+        ],
+        "variants": [
+          {
+            "id": "default",
+            "label": "Default",
+            "description": "Assembled concept view",
+            "status": "provisional"
+          },
+          {
+            "id": "exploded",
+            "label": "Exploded",
+            "description": "Separated systems for inspection",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service",
+            "description": "Access and isolation emphasis",
+            "status": "provisional"
+          }
+        ],
+        "assumptions": [
+          {
+            "statement": "Crane duty and cycle profile are illustrative.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "Power-electronics ratings and mechanical interfaces require engineering review.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "The gravity option is a short-duration reserve concept, not a city-scale battery.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          }
+        ]
+      },
+      {
+        "id": "regen-transit",
+        "name": "ReGenTransit",
+        "shortName": "Rail braking recovery",
+        "category": "electric rail",
+        "summary": "Capture regenerative braking energy at a wayside node for another train, a station load, or short-duration storage.",
+        "status": "screening",
+        "screeningEstimate": {
+          "value": 0.142,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "illustrative braking profile and capture assumption",
+          "status": "screening"
+        },
+        "heroRender": "models/regentransit/regentransit_hero.png",
+        "fallbackRender": "models/regentransit/regentransit_card.png",
+        "modelManifest": "models/regentransit/manifest.json",
+        "operatingSequence": [
+          "traction motors regenerate during braking",
+          "another accelerating train or station load receives energy first",
+          "wayside storage absorbs the surplus",
+          "dispatch is bounded by rail safety and service reliability"
+        ],
+        "hotspots": [
+          {
+            "id": "rail-vehicle",
+            "number": 1,
+            "title": "Rail vehicle",
+            "category": "source",
+            "description": "The train supplies recoverable energy during normal braking; the system does not add braking events for generation.",
+            "sceneTargets": [
+              "train",
+              "bogie"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "traction-motor",
+            "number": 2,
+            "title": "Traction motor",
+            "category": "conversion",
+            "description": "The traction system operates as a generator during a braking event.",
+            "sceneTargets": [
+              "traction-motor",
+              "axle"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "rail-interface",
+            "number": 3,
+            "title": "Traction power interface",
+            "category": "electrical interface",
+            "description": "Recovered DC energy returns through the rail power interface toward a local load or wayside converter.",
+            "sceneTargets": [
+              "catenary",
+              "third-rail",
+              "collector"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "wayside-converter",
+            "number": 4,
+            "title": "Wayside converter",
+            "category": "power electronics",
+            "description": "A bidirectional converter conditions the braking energy for storage or direct local use.",
+            "sceneTargets": [
+              "converter",
+              "cabinet"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "wayside-storage",
+            "number": 5,
+            "title": "Wayside storage rack",
+            "category": "storage",
+            "description": "A supercapacitor, flywheel, or battery path can hold energy between braking and the next useful demand.",
+            "sceneTargets": [
+              "storage-rack",
+              "modules"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "station-load-feeder",
+            "number": 6,
+            "title": "Station load feeder",
+            "category": "local use",
+            "description": "Station services can receive recovered energy when a nearby train cannot use it immediately.",
+            "sceneTargets": [
+              "feeder",
+              "station-load"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "protection-panel",
+            "number": 7,
+            "title": "Protection and isolation panel",
+            "category": "safety",
+            "description": "Local protection and isolation preserve rail safety and keep the recovery system serviceable.",
+            "sceneTargets": [
+              "protection",
+              "disconnect"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "edge-controller",
+            "number": 8,
+            "title": "Local rail controller",
+            "category": "controls",
+            "description": "The controller coordinates storage and load priority while timetable, passenger, and safety constraints remain authoritative.",
+            "sceneTargets": [
+              "controller",
+              "io"
+            ],
+            "status": "provisional"
+          }
+        ],
+        "cameras": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "status": "provisional"
+          },
+          {
+            "id": "train",
+            "label": "Train interface",
+            "status": "provisional"
+          },
+          {
+            "id": "storage",
+            "label": "Storage rack",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service access",
+            "status": "provisional"
+          }
+        ],
+        "variants": [
+          {
+            "id": "default",
+            "label": "Default",
+            "description": "Assembled concept view",
+            "status": "provisional"
+          },
+          {
+            "id": "exploded",
+            "label": "Exploded",
+            "description": "Separated systems for inspection",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service",
+            "description": "Access and isolation emphasis",
+            "status": "provisional"
+          }
+        ],
+        "assumptions": [
+          {
+            "statement": "Braking frequency, train mass, and station load are illustrative.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "Wayside location and rail interface require operator and safety review.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "Regenerative braking is an established category; cross-sector coordination is the proposed novelty.",
+            "label": "provisional framing",
+            "status": "provisional"
+          }
+        ]
+      },
+      {
+        "id": "regen-flow",
+        "name": "ReGenFlow",
+        "shortName": "Pressure recovery skid",
+        "category": "water and process",
+        "summary": "Recover a portion of hydraulic energy through a serviceable turbine-generator skid while maintaining required pressure and bypass capability.",
+        "status": "screening",
+        "screeningEstimate": {
+          "value": 0.32,
+          "unit": "GWh/year",
+          "label": "screening estimate",
+          "basis": "illustrative hydraulic duty and capture assumption",
+          "status": "screening"
+        },
+        "heroRender": "models/regenflow/regenflow_hero.png",
+        "fallbackRender": "models/regenflow/regenflow_card.png",
+        "modelManifest": "models/regenflow/manifest.json",
+        "operatingSequence": [
+          "pressure reduction is identified at a suitable line or outlet",
+          "the turbine-generator recovers part of the hydraulic head",
+          "the bypass protects service continuity during maintenance or abnormal conditions",
+          "local generation supports the facility or charges storage"
+        ],
+        "hotspots": [
+          {
+            "id": "pipe-inlet",
+            "number": 1,
+            "title": "Pipe inlet",
+            "category": "hydraulic interface",
+            "description": "The inlet brings the existing flow to a recovery skid; water service remains the primary duty.",
+            "sceneTargets": [
+              "inlet",
+              "pipe"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "isolation-valve",
+            "number": 2,
+            "title": "Isolation valve",
+            "category": "safety",
+            "description": "Isolation makes inspection and maintenance possible without relying on the generator path.",
+            "sceneTargets": [
+              "isolation-valve",
+              "actuator"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "bypass-line",
+            "number": 3,
+            "title": "Service bypass",
+            "category": "continuity",
+            "description": "A bypass preserves flow and pressure when the recovery train is unavailable.",
+            "sceneTargets": [
+              "bypass",
+              "bypass-valve"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "pump-as-turbine",
+            "number": 4,
+            "title": "Pump-as-turbine",
+            "category": "conversion",
+            "description": "A suitable pump-as-turbine or microturbine converts part of the available hydraulic head.",
+            "sceneTargets": [
+              "pat",
+              "turbine"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "generator",
+            "number": 5,
+            "title": "Generator",
+            "category": "conversion",
+            "description": "The rotating machine produces electricity for local use or storage.",
+            "sceneTargets": [
+              "generator",
+              "coupling"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "instrumentation",
+            "number": 6,
+            "title": "Flow and pressure instrumentation",
+            "category": "measurement",
+            "description": "Sensors verify operating conditions and help the controller preserve the required pressure band.",
+            "sceneTargets": [
+              "flow-meter",
+              "pressure-sensor"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "control-cabinet",
+            "number": 7,
+            "title": "Control cabinet",
+            "category": "controls",
+            "description": "Local controls manage converter state, alarms, isolation, and safe fallback.",
+            "sceneTargets": [
+              "control-cabinet",
+              "converter"
+            ],
+            "status": "provisional"
+          },
+          {
+            "id": "service-drain",
+            "number": 8,
+            "title": "Service drain and access",
+            "category": "maintenance",
+            "description": "Drain and access provisions keep the skid serviceable without compromising the live network.",
+            "sceneTargets": [
+              "drain",
+              "service-panel"
+            ],
+            "status": "provisional"
+          }
+        ],
+        "cameras": [
+          {
+            "id": "overview",
+            "label": "Overview",
+            "status": "provisional"
+          },
+          {
+            "id": "hydraulic",
+            "label": "Hydraulic path",
+            "status": "provisional"
+          },
+          {
+            "id": "controls",
+            "label": "Controls",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service access",
+            "status": "provisional"
+          }
+        ],
+        "variants": [
+          {
+            "id": "default",
+            "label": "Default",
+            "description": "Assembled concept view",
+            "status": "provisional"
+          },
+          {
+            "id": "exploded",
+            "label": "Exploded",
+            "description": "Separated systems for inspection",
+            "status": "provisional"
+          },
+          {
+            "id": "service",
+            "label": "Service",
+            "description": "Bypass and isolation emphasis",
+            "status": "provisional"
+          }
+        ],
+        "assumptions": [
+          {
+            "statement": "Flow, pressure, elevation, and seasonal duty are illustrative.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "Bypass, water quality, and utility protection require a hydraulic study.",
+            "label": "provisional assumption",
+            "status": "provisional"
+          },
+          {
+            "statement": "The recovery train must fail safe and preserve water service.",
+            "label": "provisional design principle",
+            "status": "provisional"
+          }
+        ]
+      }
+    ]
+  },
+  "methodology": {
+    "title": "Methodology and assumptions",
+    "status": "provisional",
+    "intro": "This build is a communication and interaction prototype. Screening values make the concept comparable across nodes; they are not measurements, procurement specifications, or a field operating plan.",
+    "valueLabels": {
+      "screening": "screening estimate",
+      "provisional": "provisional assumption",
+      "target": "screening concept target",
+      "notImplemented": "not implemented in this demonstration"
+    },
+    "assumptions": [
+      {
+        "id": "demo-values",
+        "title": "Demo values are screening values",
+        "body": "Annual energy and flexible-power figures are selected to make the prototype legible. They require site data, metering, and engineering validation before any investment decision.",
+        "label": "provisional assumption",
+        "status": "provisional"
+      },
+      {
+        "id": "primary-service",
+        "title": "Primary service is protected",
+        "body": "Cargo throughput, train service and safety, water pressure, and equipment protection remain hard constraints. Recovery is opportunistic and cannot justify wasteful motion.",
+        "label": "provisional design principle",
+        "status": "provisional"
+      },
+      {
+        "id": "local-safety",
+        "title": "Safety remains local",
+        "body": "Emergency shutdown, isolation, voltage protection, and safe fallback must work at the equipment or facility layer without cloud availability.",
+        "label": "provisional design principle",
+        "status": "provisional"
+      },
+      {
+        "id": "power-vs-energy",
+        "title": "Power and energy are separate",
+        "body": "Recovery nodes may deliver high short-duration power while storing modest energy. The platform is positioned for high-cycle recovery and flexibility, not multi-hour city backup.",
+        "label": "provisional framing",
+        "status": "provisional"
+      },
+      {
+        "id": "site-study",
+        "title": "Site study is required",
+        "body": "Equipment ratings, dimensions, flow and pressure, rail interfaces, tariff treatment, interconnection, maintenance, and structural conditions remain open engineering questions.",
+        "label": "provisional assumption",
+        "status": "provisional"
+      }
+    ],
+    "limits": [
+      {
+        "id": "no-live-telemetry",
+        "body": "The dispatch view is simulated and does not read live telemetry.",
+        "label": "not implemented in this demonstration",
+        "status": "provisional"
+      },
+      {
+        "id": "no-fabrication-certification",
+        "body": "The models are illustrative and are not fabrication-ready drawings or safety certifications.",
+        "label": "not implemented in this demonstration",
+        "status": "provisional"
+      },
+      {
+        "id": "no-market-claim",
+        "body": "Utility flexibility revenue, market access, and regulatory treatment are future opportunities, not confirmed project outcomes.",
+        "label": "not implemented in this demonstration",
+        "status": "provisional"
+      },
+      {
+        "id": "no-citywide-cable",
+        "body": "City-level coordination means shared data, forecasts, and bounded dispatch; it does not imply a new shared physical cable between sites.",
+        "label": "provisional framing",
+        "status": "provisional"
+      }
+    ],
+    "validationPlan": [
+      {
+        "id": "port-data",
+        "title": "Port data",
+        "body": "Confirm crane models, motor ratings, moves, lift heights, existing regeneration, and electricity tariffs.",
+        "label": "provisional validation step",
+        "status": "provisional"
+      },
+      {
+        "id": "transit-data",
+        "title": "Transit data",
+        "body": "Confirm train mass, service frequency, braking profiles, substation topology, current recovery, and station loads.",
+        "label": "provisional validation step",
+        "status": "provisional"
+      },
+      {
+        "id": "water-data",
+        "title": "Water data",
+        "body": "Confirm flow, pressure, elevation, seasonal variation, pump schedules, water quality, and bypass requirements.",
+        "label": "provisional validation step",
+        "status": "provisional"
+      },
+      {
+        "id": "grid-data",
+        "title": "Grid data",
+        "body": "Confirm local constraints, voltage quality, peak demand, interconnection rules, and any demand-response pathway.",
+        "label": "provisional validation step",
+        "status": "provisional"
+      }
+    ],
+    "sourceNotes": [
+      {
+        "source": "REGENCITY_MASTER_CONTEXT.md",
+        "use": "prototype framing, approved demo numbers, and route expectations",
+        "status": "provisional"
+      },
+      {
+        "source": "ReGenCity_Grid_Indonesia_AI_Context.md",
+        "use": "problem framing, sector descriptions, pilot ranges, and limitations",
+        "status": "provisional"
+      }
+    ]
+  },
+  "copy": {
+    "status": "provisional",
+    "home": {
+      "eyebrow": "ReGenCity Indonesia",
+      "title": "Recover what the city already moves.",
+      "body": "A concept demonstration for turning wasted motion, braking, and pressure into locally useful energy and bounded grid flexibility.",
+      "primaryCta": "Explore the ReGenCity Platform",
+      "secondaryCta": "Explore the Equipment",
+      "status": "provisional"
+    },
+    "labels": {
+      "screeningEstimate": "screening estimate",
+      "screeningTarget": "screening concept target",
+      "provisionalAssumption": "provisional assumption",
+      "notImplemented": "not implemented in this demonstration",
+      "threeDUnavailable": "3D preview unavailable",
+      "fallbackHint": "Showing the generated render instead.",
+      "status": "provisional"
+    },
+    "microcopy": {
+      "localFirst": "Local use first; storage and dispatch follow.",
+      "primaryService": "Primary service remains the hard constraint.",
+      "screeningNotice": "Screening value \u2014 site study required.",
+      "simulationNotice": "Illustrative coordination \u2014 no live telemetry.",
+      "gravityNotice": "Short-duration reserve concept \u2014 not a city-scale battery.",
+      "status": "provisional"
+    },
+    "judgeAnswers": [
+      {
+        "question": "Why not use batteries alone?",
+        "answer": "ReGenCity captures energy that already exists, uses it locally where possible, and can reduce the number of high-power cycles placed on batteries.",
+        "status": "provisional"
+      },
+      {
+        "question": "Can it generate whenever the grid needs power?",
+        "answer": "Recovery is opportunistic. Automatic response comes from stored energy and flexible loads that normal operations have refilled.",
+        "status": "provisional"
+      },
+      {
+        "question": "What is new here?",
+        "answer": "The proposed novelty is a standardized, recovery-first architecture that forecasts, measures, and coordinates established recovery technologies across port, transit, and water systems.",
+        "status": "provisional"
+      }
+    ]
+  }
+}
